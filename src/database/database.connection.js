@@ -7,4 +7,6 @@ const databaseConnection = {
     connectionString: process.env.DATABASE_CONNECTION_URL
 }
 
+process.env.NODE_ENV === "production" ? databaseConnection.ssl = true : databaseConnection.ssl = false
+
 export  const db  = new Pool(databaseConnection)
