@@ -1,7 +1,8 @@
 import express from  "express"
-import { getOrder, getOrderByClientId, getOrderById, postCakes, postClients, postOrder } from "../controllers/controllers.js"
 import {validateSchema} from "../middlewares/validateSchema.js"
 import {cakeSchema, clientSchema, orderSchema} from "../schemas/schemas.js"
+import { postCakes, postClients, postOrder } from "../controllers/post.controllers.js"
+import { getOrder, getOrderByClientId, getOrderById } from "../controllers/get.controllers.js"
 
 const app = express()
 
